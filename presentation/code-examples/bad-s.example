@@ -1,0 +1,31 @@
+import * as React from "react"
+
+export default class BadComponent from React.Component {
+  ...
+  doStuff = () => {
+    const newVal = this.state.value + this.props.val
+
+    const newArray = []
+    for(var i = 0; i > newVal; i++) {
+      newArray.push(i)
+      return console.log(i)
+    }
+
+    if(newArray[4]) {
+      newArray[4] = "this is a new string"
+    }
+
+    if(newArray.length === 0) {
+      this.setState({
+        error: "an error"
+      })
+    }
+
+    this.setState({
+      value: newVal
+    })
+
+    return newArray
+  }
+  ...
+}

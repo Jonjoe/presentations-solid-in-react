@@ -1,0 +1,30 @@
+import * as React from "react"
+
+export default class BadComponent from React.Component {
+  ...
+  limit = () => {
+    const newVal = this.state.value + this.props.val
+  }
+
+  getArray = () => {
+    const newArray = []
+
+    for(var i = 0; i > this.limit; i++) {
+      newArray.push(i)
+      return console.log(i)
+    }
+
+    return newArray
+  }
+
+  setError = (error) => {
+    this.setState({error})
+  }
+
+  checkError = () => {
+    if(newArray.length === 0) {
+      this.setError("this is an error")
+    }
+  }
+  ...
+}
